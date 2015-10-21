@@ -23,12 +23,12 @@ import org.neuroph.util.TransferFunctionType;
  *
  * @author Nuwan Prabhath
  */
-public class PierWindow extends javax.swing.JFrame {
+public class AbutmentWindow extends javax.swing.JFrame {
 
     /**
-     * Creates new form PierWindow
+     * Creates new form AbutmentWindow
      */
-    public PierWindow() {
+    public AbutmentWindow() {
         initComponents();
     }
 
@@ -43,27 +43,27 @@ public class PierWindow extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
-        jLabel1.setText("Pier Prediction");
+        jLabel1.setText("Abutment");
 
-        jLabel2.setText("Pier length (m):");
+        jLabel2.setText("Abutment wall C.L. girth (m):");
 
-        jLabel3.setText("Pier width (m):");
+        jLabel3.setText("Abutment wall height (m):");
 
-        jLabel4.setText("Pier height (m):");
+        jLabel4.setText("Abutement wall width (m):");
 
-        jLabel5.setText("No of piers: ");
+        jLabel5.setText("Result: ");
+
+        jLabel6.setText("NA");
 
         jButton1.setText("Calculate");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -79,45 +79,42 @@ public class PierWindow extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Result: ");
-
-        jLabel7.setText("NA");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel7))
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel5)
-                            .addComponent(jButton1))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel6))
+                        .addComponent(jLabel1)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel4))
+                            .addGap(31, 31, 31)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jTextField1)
                                 .addComponent(jTextField2)
-                                .addComponent(jTextField3)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)))))
-                .addContainerGap(156, Short.MAX_VALUE))
+                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)
+                        .addGap(130, 130, 130)))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGap(25, 25, 25)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -131,73 +128,70 @@ public class PierWindow extends javax.swing.JFrame {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
-                .addContainerGap(45, Short.MAX_VALUE))
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double pierLength = 0;
-        double pierWidth = 0;
-        double pierHeight = 0;
-        double noOfPiers = 0;
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        jTextField1.setText("");
+        jTextField2.setText("");       
+        jTextField3.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-        double minPierLength = 6.67;
-        double maxPierLength = 8.55;
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        double girth = 0;
+        double height = 0;
+        double width = 0;
+       
+
+        double minGirth = 15.43;
+        double maxGirth = 38.34;
         
-        double maxPierWidth = 1.98;
-        double minPierWidth = 1.12;
+        double minHeight = 7.84;
+        double maxHeight = 3.53;
         
-        double maxPierHeight = 10.34;
-        double minPierHeight = 6.03;
+        double minWidth = 0.5;
+        double maxWidth = 1;
         
-        double minNoOfPiers = 1;
-        double maxNoOfPiers = 2;
-        
+                
         //Cost limits
-        double minCost = 3262976.33;
-        double maxCost = 14872751.03;
+        double minCost = 4635543.92;
+        double maxCost = 14576856.99;
 
         // declaring number of input neurons
-        int inputCount = 4;
+        int inputCount = 3;
 
         // declaring number of output neurons
         int outputCount = 1;
 
-        String trainingSetFileName = "pier.txt";
+        String trainingSetFileName = "abutment.txt";
 
         try {
 
-            pierLength = Double.parseDouble(jTextField1.getText());
-            pierWidth = Double.parseDouble(jTextField2.getText());
-            pierHeight = Double.parseDouble(jTextField3.getText());
-            noOfPiers = Double.parseDouble(jTextField4.getText());
+            girth = Double.parseDouble(jTextField1.getText());
+            height = Double.parseDouble(jTextField2.getText());
+            width = Double.parseDouble(jTextField3.getText());
 
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(rootPane, "Please enter valid input");
         }
-        pierLength = normalizeInput(minPierLength, maxPierLength, pierLength);
-        pierWidth = normalizeInput(minPierWidth, maxPierWidth, pierWidth);
-        pierHeight = normalizeInput(minPierHeight, maxPierHeight, pierHeight);
-        noOfPiers = normalizeInput(minNoOfPiers, maxNoOfPiers, noOfPiers);
+        girth = normalizeInput(minGirth, maxGirth, girth);
+        height = normalizeInput(maxHeight, minHeight, height);
+        width = normalizeInput(maxWidth, minWidth, width);
 
         ArrayList<Double> data = new ArrayList<Double>();
-        data.add(pierLength);
-        data.add(pierWidth);
-        data.add(pierHeight);
-        data.add(noOfPiers);
+        data.add(girth);
+        data.add(height);
+        data.add(width);
 
         DataSetRow test = new DataSetRow(data);
 
@@ -216,7 +210,7 @@ public class PierWindow extends javax.swing.JFrame {
 
         //Create Multilayer Perceptron
         System.out.println("Creating neural network");
-        MultiLayerPerceptron neuralNet = new MultiLayerPerceptron(TransferFunctionType.TANH, 4, 6, 1);
+        MultiLayerPerceptron neuralNet = new MultiLayerPerceptron(TransferFunctionType.TANH, 3, 5, 1);
 
         //Set Learning Parameters 
         MomentumBackpropagation learningRule = (MomentumBackpropagation) neuralNet.getLearningRule();
@@ -240,10 +234,8 @@ public class PierWindow extends javax.swing.JFrame {
         NumberFormat nf = NumberFormat.getInstance();
         nf.setMinimumFractionDigits(7);
         String output = " Rs: " + nf.format(valueEstimation);
-        jLabel7.setText(output);
-
+        jLabel6.setText(output);
     }//GEN-LAST:event_jButton1ActionPerformed
-
     private double normalizeInput(double min, double max, double input) {
         return (input - min) / (max - min);
     }
@@ -256,14 +248,6 @@ public class PierWindow extends javax.swing.JFrame {
         double result = networkOutput[0];
         return min + result * (max - min);
     }
-    
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jTextField1.setText("");
-        jTextField2.setText("");       
-        jTextField3.setText("");
-        jTextField4.setText("");        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -281,20 +265,20 @@ public class PierWindow extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PierWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PierWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PierWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PierWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PierWindow().setVisible(true);
+                new AbutmentWindow().setVisible(true);
             }
         });
     }
@@ -308,10 +292,8 @@ public class PierWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
