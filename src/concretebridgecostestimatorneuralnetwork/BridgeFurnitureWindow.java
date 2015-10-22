@@ -9,6 +9,7 @@ package concretebridgecostestimatorneuralnetwork;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -199,8 +200,10 @@ public class BridgeFurnitureWindow extends javax.swing.JFrame {
         double valueEstimation = Normalizer.deNormalize(neuralNet, test,minCost,maxCost);
 
         System.out.println("Last Result " + valueEstimation);
+        DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
+        symbols.setGroupingSeparator(' ');
+        DecimalFormat nf = new DecimalFormat("###,###.##");
         
-        DecimalFormat nf = new DecimalFormat("#.##");
         String output = " Rs: " + nf.format(valueEstimation);
         jLabel4.setText(output);
     }//GEN-LAST:event_jButton1ActionPerformed

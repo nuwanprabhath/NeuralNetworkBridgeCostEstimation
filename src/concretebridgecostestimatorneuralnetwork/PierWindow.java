@@ -9,6 +9,7 @@ package concretebridgecostestimatorneuralnetwork;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -250,7 +251,9 @@ public class PierWindow extends javax.swing.JFrame {
 
         System.out.println("Last Result " + valueEstimation);
         
-        DecimalFormat nf = new DecimalFormat("#.##");
+        DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
+        symbols.setGroupingSeparator(' ');
+        DecimalFormat nf = new DecimalFormat("###,###.##");
         String output = " Rs: " + nf.format(valueEstimation);
         jLabel7.setText(output);
 
