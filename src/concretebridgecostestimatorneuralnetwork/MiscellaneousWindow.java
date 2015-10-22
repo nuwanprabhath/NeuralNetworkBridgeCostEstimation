@@ -23,12 +23,12 @@ import org.neuroph.util.TransferFunctionType;
  *
  * @author Nuwan Prabhath
  */
-public class AbutmentWindow extends javax.swing.JFrame {
+public class MiscellaneousWindow extends javax.swing.JFrame {
 
     /**
-     * Creates new form AbutmentWindow
+     * Creates new form MiscellaneousWindow
      */
-    public AbutmentWindow() {
+    public MiscellaneousWindow() {
         initComponents();
     }
 
@@ -46,26 +46,16 @@ public class AbutmentWindow extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1.setText("Miscellaneous Prediction");
 
-        jLabel1.setText(" Abutment Prediction");
+        jLabel2.setText("Bridge Length (m):");
 
-        jLabel2.setText("Abutment wall C.L. girth (m):");
-
-        jLabel3.setText("Abutment wall height (m):");
-
-        jLabel4.setText("Abutement wall width (m):");
-
-        jLabel5.setText("Result: ");
-
-        jLabel6.setText("NA");
+        jLabel3.setText("Bridge Width (m):");
 
         jButton1.setText("Calculate");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,62 +71,57 @@ public class AbutmentWindow extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Result: ");
+
+        jLabel5.setText("NA");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel5)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel6))
-                        .addComponent(jLabel1)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4))
-                            .addGap(31, 31, 31)
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel5))
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jButton1))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jTextField1)
-                                .addComponent(jTextField2)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addGap(130, 130, 130)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)))))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(26, 26, 26)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addContainerGap(71, Short.MAX_VALUE))
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
@@ -145,54 +130,45 @@ public class AbutmentWindow extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jTextField1.setText("");
-        jTextField2.setText("");       
-        jTextField3.setText("");
+        jTextField2.setText("");  
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double girth = 0;
-        double height = 0;
+       double length = 0;
         double width = 0;
-       
 
-        double minGirth = 15.43;
-        double maxGirth = 38.34;
+        double minLength = 19.7;
+        double maxLength = 72.55;
         
-        double minHeight = 7.84;
-        double maxHeight = 3.53;
-        
-        double minWidth = 0.5;
-        double maxWidth = 1;
+        double minWidth = 6.37;
+        double maxWidth = 8.25;
         
                 
         //Cost limits
-        double minCost = 4635543.92;
-        double maxCost = 14576856.99;
+        double minCost = 403628.05;
+        double maxCost = 121948.98;
 
         // declaring number of input neurons
-        int inputCount = 3;
+        int inputCount = 2;
 
         // declaring number of output neurons
         int outputCount = 1;
 
-        String trainingSetFileName = "abutment.txt";
+        String trainingSetFileName = "miscellaneous.txt";
 
         try {
 
-            girth = Double.parseDouble(jTextField1.getText());
-            height = Double.parseDouble(jTextField2.getText());
-            width = Double.parseDouble(jTextField3.getText());
+            length = Double.parseDouble(jTextField1.getText());
+            width = Double.parseDouble(jTextField2.getText());
 
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(rootPane, "Please enter valid input");
         }
-        girth = normalizeInput(minGirth, maxGirth, girth);
-        height = normalizeInput(maxHeight, minHeight, height);
+        length = normalizeInput(minLength, maxLength, length);
         width = normalizeInput(maxWidth, minWidth, width);
 
         ArrayList<Double> data = new ArrayList<Double>();
-        data.add(girth);
-        data.add(height);
+        data.add(length);
         data.add(width);
 
         DataSetRow test = new DataSetRow(data);
@@ -212,7 +188,7 @@ public class AbutmentWindow extends javax.swing.JFrame {
 
         //Create Multilayer Perceptron
         System.out.println("Creating neural network");
-        MultiLayerPerceptron neuralNet = new MultiLayerPerceptron(TransferFunctionType.TANH, 3, 5, 1);
+        MultiLayerPerceptron neuralNet = new MultiLayerPerceptron(TransferFunctionType.TANH, 2, 4, 1);
 
         //Set Learning Parameters 
         MomentumBackpropagation learningRule = (MomentumBackpropagation) neuralNet.getLearningRule();
@@ -234,9 +210,12 @@ public class AbutmentWindow extends javax.swing.JFrame {
         System.out.println("Last Result " + valueEstimation);
         
         NumberFormat nf = NumberFormat.getInstance();
-        nf.setMinimumFractionDigits(7);
+        nf.setMinimumFractionDigits(2);
+        nf.setMaximumIntegerDigits(7);
+        nf.setMinimumIntegerDigits(1);
+        
         String output = " Rs: " + nf.format(valueEstimation);
-        jLabel6.setText(output);
+        jLabel5.setText(output);
     }//GEN-LAST:event_jButton1ActionPerformed
     private double normalizeInput(double min, double max, double input) {
         return (input - min) / (max - min);
@@ -248,6 +227,8 @@ public class AbutmentWindow extends javax.swing.JFrame {
 
         double[] networkOutput = nnet.getOutput();
         double result = networkOutput[0];
+        System.out.println("NN result "+result+" min: "+min+", max:"+max+" last"+result * (max - min));
+
         return min + result * (max - min);
     }
     /**
@@ -267,20 +248,20 @@ public class AbutmentWindow extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MiscellaneousWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MiscellaneousWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MiscellaneousWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AbutmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MiscellaneousWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AbutmentWindow().setVisible(true);
+                new MiscellaneousWindow().setVisible(true);
             }
         });
     }
@@ -293,9 +274,7 @@ public class AbutmentWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
