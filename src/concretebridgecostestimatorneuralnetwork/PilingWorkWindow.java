@@ -7,6 +7,7 @@ package concretebridgecostestimatorneuralnetwork;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -223,8 +224,7 @@ public class PilingWorkWindow extends javax.swing.JFrame {
 
         System.out.println("Last Result " + valueEstimation);
         
-        NumberFormat nf = NumberFormat.getInstance();
-        nf.setMinimumFractionDigits(7);
+        DecimalFormat nf = new DecimalFormat("#.##");
         String output = " Rs: " + nf.format(valueEstimation);
         jLabel5.setText(output);
 
