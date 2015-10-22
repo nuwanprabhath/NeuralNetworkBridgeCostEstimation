@@ -55,6 +55,7 @@ public class AbutmentWindow extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
 
         setTitle("Abutment Prediction");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText(" Abutment Prediction");
@@ -191,9 +192,9 @@ public class AbutmentWindow extends javax.swing.JFrame {
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(rootPane, "Please enter valid input");
         }
-        girth = normalizeInput(minGirth, maxGirth, girth);
-        height = normalizeInput(maxHeight, minHeight, height);
-        width = normalizeInput(maxWidth, minWidth, width);
+        girth = Normalizer.normalizeInput(minGirth, maxGirth, girth);
+        height = Normalizer.normalizeInput(maxHeight, minHeight, height);
+        width = Normalizer.normalizeInput(maxWidth, minWidth, width);
 
         ArrayList<Double> data = new ArrayList<Double>();
         data.add(girth);
@@ -234,7 +235,7 @@ public class AbutmentWindow extends javax.swing.JFrame {
         // Test the perceptron 
         System.out.println("Testing the trained neural network");
 
-        double valueEstimation = deNormalize(neuralNet, test,minCost,maxCost);
+        double valueEstimation = Normalizer.deNormalize(neuralNet, test,minCost,maxCost);
 
         System.out.println("Last Result " + valueEstimation);
         
@@ -243,18 +244,7 @@ public class AbutmentWindow extends javax.swing.JFrame {
         String output = " Rs: " + nf.format(valueEstimation);
         jLabel6.setText(output);
     }//GEN-LAST:event_jButton1ActionPerformed
-    private double normalizeInput(double min, double max, double input) {
-        return (input - min) / (max - min);
-    }
-
-    private double deNormalize(NeuralNetwork nnet, DataSetRow test, double min, double max) {
-        nnet.setInput(test.getInput());
-        nnet.calculate();
-
-        double[] networkOutput = nnet.getOutput();
-        double result = networkOutput[0];
-        return min + result * (max - min);
-    }
+   
     /**
      * @param args the command line arguments
      */

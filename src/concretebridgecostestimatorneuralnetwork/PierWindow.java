@@ -57,6 +57,7 @@ public class PierWindow extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
 
         setTitle("Pier Prediction");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Pier Prediction");
@@ -199,10 +200,10 @@ public class PierWindow extends javax.swing.JFrame {
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(rootPane, "Please enter valid input");
         }
-        pierLength = normalizeInput(minPierLength, maxPierLength, pierLength);
-        pierWidth = normalizeInput(minPierWidth, maxPierWidth, pierWidth);
-        pierHeight = normalizeInput(minPierHeight, maxPierHeight, pierHeight);
-        noOfPiers = normalizeInput(minNoOfPiers, maxNoOfPiers, noOfPiers);
+        pierLength = Normalizer.normalizeInput(minPierLength, maxPierLength, pierLength);
+        pierWidth = Normalizer.normalizeInput(minPierWidth, maxPierWidth, pierWidth);
+        pierHeight = Normalizer.normalizeInput(minPierHeight, maxPierHeight, pierHeight);
+        noOfPiers = Normalizer.normalizeInput(minNoOfPiers, maxNoOfPiers, noOfPiers);
 
         ArrayList<Double> data = new ArrayList<Double>();
         data.add(pierLength);
@@ -244,7 +245,7 @@ public class PierWindow extends javax.swing.JFrame {
         // Test the perceptron 
         System.out.println("Testing the trained neural network");
 
-        double valueEstimation = deNormalize(neuralNet, test,minCost,maxCost);
+        double valueEstimation = Normalizer.deNormalize(neuralNet, test,minCost,maxCost);
 
         System.out.println("Last Result " + valueEstimation);
         
@@ -255,18 +256,7 @@ public class PierWindow extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private double normalizeInput(double min, double max, double input) {
-        return (input - min) / (max - min);
-    }
-
-    private double deNormalize(NeuralNetwork nnet, DataSetRow test, double min, double max) {
-        nnet.setInput(test.getInput());
-        nnet.calculate();
-
-        double[] networkOutput = nnet.getOutput();
-        double result = networkOutput[0];
-        return min + result * (max - min);
-    }
+    
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jTextField1.setText("");

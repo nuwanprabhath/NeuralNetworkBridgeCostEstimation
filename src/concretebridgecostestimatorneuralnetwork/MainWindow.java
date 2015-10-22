@@ -56,6 +56,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Concrete Bridge Cost Estimator");
+        setResizable(false);
 
         jButton1.setText("Getting Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
